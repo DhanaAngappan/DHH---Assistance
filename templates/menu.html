@@ -5,58 +5,22 @@
     <style>
         body {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: large;
-            color: brown;
-            font-weight: bold;
             margin: 0;
-            padding:0;
-            background-color: #fce5e5; /* Light gray background */
-        }
-        
-        .container {
-            display: flex;
-            height: 100vh;
-            flex-direction: column; /* Stack items vertically */
-        }
-
-        .navbar {
-            background-color: brown;
-            color: #fff;
-            padding: 20px;
-            margin-bottom: auto; /* Pushes content to the bottom */
-            display: flex;
-            justify-content: flex-end; /* Align items to the right */
-            }
-
-        .navbar ul {
-            list-style-type: none;
             padding: 0;
-            margin: 0; /* Remove default margin */
             display: flex;
-            gap: 20px; /* Add space between items */
-        }
-
-        .navbar li {
-            display: inline-block;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .content {
-            padding: 20px;
-            margin-bottom: 200px;
-            display: flex; /* Add this line */
-            justify-content: space-between; /* Add this line */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fce5e5; /* Light gray background */
         }
 
         #left {
             flex: 2;
-            background-color: #ffffff;
+            background-color: #fce5e5; /* Blue background */
             padding: 20px;
-            text-align: center;
+            text-align: left; /* Align text to the left */
+            color: brown; /* White text */
         }
 
         #right {
@@ -65,49 +29,65 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px; /* Limit the width of the right column */
         }
 
         button {
+            display: block;
             margin-bottom: 10px;
             padding: 10px 20px;
             font-size: 16px;
-            border: 1px solid #ffffff;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            width: 180px;
+            border: solid transparent;
             border-radius: 25px;
-            text-align: center;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            background-color: brown; /* White background */
+            color: #fce5e5; /* Blue text */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         button:hover {
-            background-color: #ffffff;
+            background-color: brown; /* Blue background on hover */
+            color: #fce5e5; /* White text on hover */
         }
 
+        /* Navbar Styles */
+        .navbar {
+            background-color: brown;
+            color: #fff;
+            width: 100%;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center; /* Center the items horizontally */
+            position: fixed; /* Fixed position to keep the navbar at the top */
+            top: 0; /* Position at the top of the viewport */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px; /* Add space around each link */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="left">
+        <h1>Welcome!</h1>
+        <p><user name></p>
+        <p>Lets talk</p>
+    </div>
+    <div id="right">
         <div class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="Guide.html">Guide</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="guide.html">Guide</a>
+            <a href="contact.html">Contact</a>
         </div>
-
-          <div id="left">
-             <h1>Welcome!</h1>
-            <p><user name></p>
-            <p>Lets talk</p>
-        </div>
-        <div id="right">
-            <button onclick="window.location.href='SLR.html'">Sign Language Recognition</button>
-            <button onclick="window.location.href='TTS.html'">Text To Speech</button>
-            <button onclick="window.location.href='STT.html'">Speech To Text</button>
-        </div>
+        <button onclick="window.location.href='SLR.html'">Sign Language Recognition</button>
+        <button onclick="window.location.href='TTS.html'">Text To Speech</button>
+        <button onclick="window.location.href='STT.html'">Speech To Text</button>
     </div>
 </body>
 </html>
