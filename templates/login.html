@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f4d7d7;
+            color: brown;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .navbar {
+            background-color: brown;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            margin-top: 0;
+            margin-bottom: 20px; /* Add margin to separate from content */
+            position: fixed; /* Fixed position to keep the navbar at the top */
+            top: 0; /* Position at the top of the viewport */
+        }
+
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px; /* Add space between each word */
+        }
+
+        .contact-container {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px; /* Add space between navbar and content */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: brown;
+        }
+
+        .register-link {
+            margin-top: 10px;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="Guide.html">Guide</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>New user? <a href="register.html" class="register-link">Register</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TTS Page</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        #left {
+            flex: 2;
+            background-color: #f4d7d7;
+            color:brown;
+
+            padding: 20px;
+            text-align: center;
+        }
+
+        #right {
+            flex: 1;
+            color: brown;
+            background-color: #f4d7d7;
+            padding: 20px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 5px;
+            text-align: center;
+            background-color: brown;
+            color: #fff;
+            text-decoration: none;
+            width: 180px;
+            border-radius: 25px;
+            font-size: 16px;
+            border: 1px solid transparent;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        #input {
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <h2>Enter text to convert to speech</h2>
+        <textarea id="input" placeholder="Enter text..."></textarea>
+        <button id="convertButton">Convert</button>
+    </div>
+    <div id="right">
+        <h2>Audio Output</h2>
+        <audio controls id="audio"></audio>
+    </div>
+
+    <script>
+        const input = document.getElementById('input');
+        const convertButton = document.getElementById('convertButton');
+        const audio = document.getElementById('audio');
+
+        function convertToSpeech() {
+            const text = input.value.trim();
+            if (text === '') {
+                alert('Please enter some text to convert.');
+                return;
+            }
+
+            // Simulate TTS conversion by setting the audio source to a sample audio file
+            audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+            audio.play();
+        }
+
+        convertButton.addEventListener('click', convertToSpeech);
+    </script>
+</body>
+</html>

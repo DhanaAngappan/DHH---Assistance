@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f4d7d7;
+            color: brown;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .navbar ul {
+            list-style-type: none;
+             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px; /* Add space between each word */
+        }
+
+        .navbar {
+            background-color: brown;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            margin-top: 0;
+            margin-bottom: 20px; /* Add margin to separate from content */
+            position: fixed; /* Fixed position to keep the navbar at the top */
+            top: 0; /* Position at the top of the viewport */
+        }
+
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px; /* Add space between each word */
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: brown;
+        }
+
+        .login-link {
+            color: brown;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <a href="home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="Guide.html">Guide</a>
+            <a href="Contact.html">Contact</a>
+        </ul>
+    </div>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+        <a href="login.html" class="login-link">Login -></a>
+    </div>
+</body>
+</html>
