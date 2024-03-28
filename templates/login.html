@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: large;
+            color: brown;
+            font-weight: bold;
+            margin: 0;
+            padding:0;
+            background-color: #fce5e5; /* Light gray background */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        .navbar {
+            background-color: brown;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: auto; /* Pushes content to the bottom */
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+            display: flex;
+            gap: 20px; /* Add space between items */
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .content {
+            padding: 20px;
+            margin-bottom: 200px;
+            text-align: center;
+        }
+
+        .login-box {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid brown;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .login-box label {
+            font-weight: normal;
+        }
+
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: brown;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-box input[type="submit"]:hover {
+            background-color: #8b0000; /* Darker shade of brown */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: brown;
+            color: #fff;
+            text-decoration: none;
+            width: 180px;
+            border-radius: 25px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: brown;
+            color: #fff;
+            border-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Guide.html">Guide</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Login</h1>
+            <div class="login-box">
+                <form action="/login" method="POST">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="submit" value="Login" class="btn">
+                </form>
+            </div>
+            <p>New user? <a href="register.html">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
