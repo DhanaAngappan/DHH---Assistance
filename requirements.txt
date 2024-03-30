@@ -3,3 +3,5 @@ TensorFlow 2.13
 Mediapipe 0.10.10
 OpenCV 4.9.0.80
 Keras 2.13.1
+Scikit learn
+
