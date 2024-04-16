@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <title>Login Page</title>
     <style>
         body {
@@ -127,16 +126,98 @@
         <div class="content">
             <h1>Login</h1>
             <div class="login-box">
-                <form action="/login" method="POST">
+                <form id="loginForm">
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email"><br><br>
                     <label for="password">Password:</label><br>
                     <input type="password" id="password" name="password"><br><br>
-                    <input type="submit" value="Login" class="btn">
+                    <input type="submit" value="Login" class="btn" id="Login">
                 </form>
             </div>
             <p>New user? <a href="register.html">Register</a></p>
         </div>
     </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword ,onAuthStateChanged , signOut} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCDhled4Wj0pjfxp3FnODE9elxK6hgOqxQ",
+          authDomain: "projectdhh-81b8f.firebaseapp.com",
+          databaseURL: "https://projectdhh-81b8f-default-rtdb.firebaseio.com",
+          projectId: "projectdhh-81b8f",
+          storageBucket: "projectdhh-81b8f.appspot.com",
+          messagingSenderId: "211653081562",
+          appId: "1:211653081562:web:39d4291b114f0b3b6728e3"
+        };
+      
+        // Initialize Firebase
+      
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+    
+        // Adding event listener for form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+           
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+           
+           
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                const dt = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                last_login:dt,
+               
+            });
+
+                // ...
+                alert('User logged in!');
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+        });
+        const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+logout.addEventListener(click,(e)=>{
+    signOut(auth).then(() => {
+  // Sign-out successful.
+  alert('user loged out')
+}).catch((error) => { const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+  // An error happened.
+});
+})
+
+    
+      </script>
+    
+    
 </body>
 </html>
