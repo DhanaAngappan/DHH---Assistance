@@ -127,7 +127,7 @@
         <div class="content">
             <h1>Register</h1>
             <div class="register-box">
-                <form id="registerForm">
+                <form id="registerForm" method="POST">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name"><br><br>
                     <label for="registerEmail">Email:</label><br>
@@ -139,7 +139,7 @@
                     <input type="submit" value="Register" class="btn" id="register">
                 </form>
             </div>
-            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>Already have an account? <a href="/login">Login</a></p>
         </div>
     </div>
    </body>
@@ -195,6 +195,7 @@
             });
 
             alert('User created!');
+            window.location.href = "/home";
         })
         .catch((error) => {
             // Handle errors
