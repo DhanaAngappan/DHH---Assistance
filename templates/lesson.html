@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <style>
+          
+    .dropdown 
+    {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .dropdown-button
+     {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content 
+    {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 200px;
+        text-size-adjust: 5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a 
+    {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover 
+    {
+        background-color: black;
+    }
+
+    .dropdown:hover .dropdown-content 
+    {
+        display: block;
+    }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+            color: white;
+            margin: 0;
+            padding:0;
+            background: url("bg3.jpg") no-repeat;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            background-size: cover;/* Light gray background */
+        }
+
+        header {
+            height: 20px;
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: auto; 
+            display: flex;
+            text-align: center;
+            justify-content: flex-end; 
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+            display: flex;
+            gap: 50px; 
+            margin-right: 50px;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .content {
+            display: flex;
+            margin-top: 100px; /* Adjust for header height */
+            padding: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+
+        .section {
+            margin: 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: calc(20% - 20px);
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <div class="section">
+        <h2>Numbers</h2>
+        <div class="cards">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Alphabets</h2>
+        <div class="cards">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Words</h2>
+        <div class="cards">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
