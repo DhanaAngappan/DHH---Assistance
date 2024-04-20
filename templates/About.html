@@ -4,40 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>About Page</title>
+    <title>Contact</title>
     <style>
+        .dropdown 
+    {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .dropdown-button
+     {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content 
+    {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 200px;
+        text-size-adjust: 5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a 
+    {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover 
+    {
+        background-color: black;
+    }
+
+    .dropdown:hover .dropdown-content 
+    {
+        display: block;
+    }
         body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: large;
-            color: brown;
-            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+            background: url("bg3.jpg") no-repeat; */
+            position: relative;
             margin: 0;
-            padding:0;
-            background-color: #fce5e5; /* Light gray background */
+            padding: 0;
+            background-size: cover;
         }
 
         .container {
             display: flex;
             height: 100vh;
             flex-direction: column; /* Stack items vertically */
-            text-align: center;
         }
 
         .navbar {
-            background-color: brown;
+            background-color: black;
             color: #fff;
             padding: 20px;
-            margin-bottom: auto; /* Pushes content to the bottom */
+            margin-bottom: auto; 
             display: flex;
-            justify-content: flex-end; /* Align items to the right */
+            text-align: center;
+            justify-content: flex-end; 
         }
 
         .navbar ul {
             list-style-type: none;
             padding: 0;
-            margin: 0; /* Remove default margin */
+            margin: 0; 
             display: flex;
-            gap: 20px; /* Add space between items */
+            gap: 50px; 
+            margin-right: 50px;
         }
 
         .navbar li {
@@ -49,38 +92,46 @@
             text-decoration: none;
         }
 
-        .content {
+         .content {
+            margin-bottom: 100px;
             padding: 20px;
-            margin-bottom: 200px;
             display: flex;
-            justify-content: space-between; /* Space items evenly */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
             flex-wrap: wrap; /* Wrap items to next row */
-            margin: auto; /* Center content horizontally */
         }
 
         .box {
-            width: 45%; /* Adjust width for two boxes in a row */
-            padding: 20px;
-            border: 1px solid brown;
+            width: 35%; /* Adjust width for two boxes in a row */
+            padding: 15px;
+            border: 1px;
             border-radius: 10px;
             background-color: #fff;
             margin-bottom: 20px;
             text-align: center;
+            margin: 10px; /* Adjust margin for spacing between boxes */
         }
 
-        .box h2 {
-            margin-top: 0;
-        }
+        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Guide.html">Guide</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/lesson">Lesson</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-button">Recogniser</a>
+                    <div class="dropdown-content">
+                        <a href="/number">Number Recognition</a>
+                        <a href="/alphabet">Alphabet Recognition</a>
+                        <a href="/words">Word Recognition</a>
+                    </div>
+                </li>
+                <li><a href="/Play">Play</a></li>
+                <li><a href="/Contact">Contact</a></li>
             </ul>
         </div>
 
@@ -94,7 +145,7 @@
             <div class="box">
                 <h2>2. What we do</h2>
                 <p>
-                    <br><i>Our mission is to provide inovative communication solutions tailored to the unique needs of speech-impaired individuals.</i></br>
+                    <br><i>Our mission is to provide innovative communication solutions tailored to the unique needs of speech-impaired individuals.</i></br>
                 </p>
             </div>
             <div class="box">
@@ -106,9 +157,10 @@
             <div class="box">
                 <h2>4. Future services</h2>
                 <p>
-                    <br><i>Stay tuned for exciting upcomming services designed to further enhance communication and accessibility for our community.</i></br>
+                    <br><i>Stay tuned for exciting upcoming services designed to further enhance communication and accessibility for our community.</i></br>
                 </p>
             </div>
+  
         </div>
     </div>
 </body>
