@@ -576,6 +576,9 @@
         box-sizing: border-box;
         text-align: center;
         display: inline-block; /* Use inline-block to allow elements to be displayed in a row */
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;        
         } 
         .cardnum1 {
         width: 230px; /* Set the width to 230 pixels */
@@ -712,6 +715,46 @@
         text-align: center;
         display: inline-block; /* Use inline-block to allow elements to be displayed in a row */
         } 
+        /*.cardnum::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cardnum:hover::before {
+            opacity: 1;
+        }
+
+        .cardnum::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cardnum:hover::after {
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("0.jpg")
+        }  
+        .cardnum1:hover::after {
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("1.jpg")
+        }*/        
 
         .section_numbers{
             margin-top: 10px;
@@ -792,16 +835,16 @@
                 <div class="cards">
                     <!-- Generate 10 cards for numbers -->
                     <!-- For example, you can use PHP, JavaScript, or manually -->
-                    <div class="cardnum">Card 0</div>
-                    <div class="cardnum1">Card 1</div>
-                    <div class="cardnum2">Card 2</div>
-                    <div class="cardnum3">Card 3</div>
-                    <div class="cardnum4">Card 4</div>
-                    <div class="cardnum5">Card 5</div>
-                    <div class="cardnum6">Card 6</div>
-                    <div class="cardnum7">Card 7</div>
-                    <div class="cardnum8">Card 8</div>
-                    <div class="cardnum9">Card 9</div>
+                    <div class="cardnum">Sign-0</div>
+                    <div class="cardnum1">Sign-1</div>
+                    <div class="cardnum2">Sign-2</div>
+                    <div class="cardnum3">Sign-3</div>
+                    <div class="cardnum4">Sign-4</div>
+                    <div class="cardnum5">Sign-5</div>
+                    <div class="cardnum6">Sign-6</div>
+                    <div class="cardnum7">Sign-7</div>
+                    <div class="cardnum8">Sign-8</div>
+                    <div class="cardnum9">Sign-9</div>
                 </div>
             </div>
     
