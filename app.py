@@ -15,7 +15,7 @@ ref = db.reference()
 # Routes
 @app.route('/')
 def index():
-    return redirect(url_for('home'))
+    return render_template('index.html')
 
 @app.route('/home')
 def home():
@@ -58,6 +58,16 @@ def register():
             error_message = "Passwords do not match"
             return render_template('register.html', error=error_message)
     return render_template('register.html')
+
+@app.route('/lesson')
+def lesson():
+    return render_template('lesson.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+@app.route('/number')
+def number():
+    return render_template('number.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
