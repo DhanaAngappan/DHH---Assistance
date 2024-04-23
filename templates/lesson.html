@@ -599,7 +599,8 @@
         margin-bottom: 20px;
         background-color: #000;
         background-repeat: repeat-y;
-        background-image: url("1.jpg");
+        background-image: url("{{ url_for('static', filename='images/1.jpg') }}")
+/*         background-image: url("1.jpg"); */
         background-size: contain; /* Ensure the image fits fully within the box */
         background-position: center; /* Center the background image */
         border-radius: 10px;
